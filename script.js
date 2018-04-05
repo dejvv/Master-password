@@ -105,6 +105,11 @@ function addPassword() {
 		// recreate table
 		resetTable();
 		loadsTable();
+
+		// remove paragraph for displaying that there are no passwords stored
+		let is_there_any_passwords = document.getElementById("test");
+		if (is_there_any_passwords)
+			$(is_there_any_passwords).remove();
 	} catch (err) {
 		document.getElementById("error").innerHTML = err.message;
 		return false;
@@ -155,12 +160,13 @@ function removePassword(event) {
         storeToLocal(all_passwords, "all_passwords")
         //all_passwords
         table.remove(tr);
+        resetOnePasswordTable();
     }
 }
 
-function display(){
+function display(event){
 	resetOnePasswordTable();
-	displayPassword();
+	displayPassword(event);
 }
 
 function displayPassword(event) {
@@ -168,7 +174,7 @@ function displayPassword(event) {
     
 	let remove_text = $(tr1).text();
 	all_passwords = getFromLocal("all_passwords")
-    let display = all_passwords[remove_text];
+    let displayed = all_passwords[remove_text];
     const table = document.getElementById("one-password-table");
 
     let tr = document.createElement("tr");
@@ -177,7 +183,7 @@ function displayPassword(event) {
 	td.innerText = remove_text;
 	tr.appendChild(td);
 	td = document.createElement("td");
-	td.innerText = display;
+	td.innerText = displayed;
 	tr.appendChild(td);
 }
 
