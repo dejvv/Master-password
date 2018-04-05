@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>Login Master password</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link href="style.css" rel="stylesheet">
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="before.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body">
+    <!-- container for css grid -->
+    <div class = "container">
+      <div class="header">
+        <h1>Master password login</h1>
+      </div>
+      <div class="lock-icon">
+        <img src="lock-icon.png" alt="Lock icon" id = "lock-icon-image">
+      </div>
+      <div class="master-password">
+        <div id="login">
+          <label for = "login-input">
+            <input id = "login-input" type="password" name="password" autofocus="True" placeholder="password">
+          </label>
+        </div>
+        <button id = "login-button" type = "button" onclick="comparePassword();">Unlock</button>
+        <p id="error"></p>
+      </div>
+      <div class="unlock"></div>
+      <div class="info">
+        <a href="https://github.com/dejvv/Master-password">@github</a><br>
+        <a href="https://ucilnica.fri.uni-lj.si/mod/assign/view.php?id=20875">@assignment</a>
+        <a id = "setup-password" href="setup.html">Setup your password</a>
+      </div>
+    </div>
+ </form>
+
+   
+  </body>
+</html>
