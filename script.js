@@ -71,7 +71,7 @@ function setPassword() {
 	}
 	storeToLocal("completed", "setup");
 	alert("Setup successful! You will be redirected to login page")
-	window.location.href = "login.html"
+	window.location.href = "./index.html"
 }
 
 

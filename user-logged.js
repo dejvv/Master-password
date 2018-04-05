@@ -1,7 +1,7 @@
 // MAIN
 // if user tried to access main.html without log in redirect him
 if (JSON.parse(localStorage.getItem("validation")) !== "passed") {
-	window.location.href = "login.html"
+	window.location.href = "./index.html"
 }
 
 window.onbeforeunload = function (e) {
